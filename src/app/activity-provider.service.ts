@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Activity } from 'src/app/models/time-data-interface';
+import { Observable, Subject } from "rxjs";
 import ActivityData from 'src/assets/json/data.json';
 
 @Injectable({
