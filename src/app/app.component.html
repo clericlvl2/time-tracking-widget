@@ -1,7 +1,7 @@
 <div class="grid-container">
-  <app-card-user class="first-item"></app-card-user>
-  <app-card-tracker *ngFor="let activity of activityList"
+  <app-user-card class="first-item"></app-user-card>
+  <app-activity-card *ngFor="let activity of activityList"
                     [activityData]="activity"
                     [activityPeriod]="activityPeriod"
-  ></app-card-tracker>
+  ></app-activity-card>
 </div>

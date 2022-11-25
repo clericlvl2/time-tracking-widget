@@ -3,14 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CardUserComponent } from './card-user/card-user.component';
-import { CardTrackerComponent } from './card-tracker/card-tracker.component';
+import { UserCardComponent } from './components/user-card/user-card.component';
+import { ActivityCardComponent } from './components/activity-card/activity-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CardUserComponent,
-    CardTrackerComponent
+    UserCardComponent,
+    ActivityCardComponent
   ],
   imports: [
     BrowserModule,

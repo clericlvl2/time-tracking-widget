@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Rubik';
-  src: url('~src/assets/fonts/Rubik-VariableFont_wght.ttf');
+  src: url('../../../assets/fonts/Rubik-VariableFont_wght.ttf');
 }
 
 // primary card styles
@@ -50,7 +50,7 @@
     padding: 0;
     width: 18px;
     height: 9px;
-    background: url("~src/assets/images/icon-ellipsis.svg") no-repeat center;
+    background: url("../../../assets/images/icon-ellipsis.svg") no-repeat center;
     background-size: contain;
     opacity: .6;
     border: none;
@@ -147,7 +147,7 @@
 // styles for different activities
 
 .work {
-  background: hsl(15, 100%, 70%) url("~src/assets/images/icon-work.svg") no-repeat right 15px top -5px;
+  background: hsl(15, 100%, 70%) url("../../../assets/images/icon-work.svg") no-repeat right 15px top -5px;
   background-size: 50px 50px;
 
   @media screen and (max-width: 768px) {
@@ -156,7 +156,7 @@
 }
 
 .play {
-  background: hsl(195, 74%, 62%) url("~src/assets/images/icon-play.svg") no-repeat right 15px top -5px;
+  background: hsl(195, 74%, 62%) url("../../../assets/images/icon-play.svg") no-repeat right 15px top -5px;
   background-size: 50px 50px;
 
   @media screen and (max-width: 768px) {
@@ -165,7 +165,7 @@
 }
 
 .study {
-  background: hsl(348, 100%, 68%) url("~src/assets/images/icon-study.svg") no-repeat right 15px top -5px;
+  background: hsl(348, 100%, 68%) url("../../../assets/images/icon-study.svg") no-repeat right 15px top -5px;
   background-size: 50px 50px;
 
   @media screen and (max-width: 768px) {
@@ -174,7 +174,7 @@
 }
 
 .exercise {
-  background: hsl(145, 58%, 55%) url("~src/assets/images/icon-exercise.svg") no-repeat right 15px top -5px;
+  background: hsl(145, 58%, 55%) url("../../../assets/images/icon-exercise.svg") no-repeat right 15px top -5px;
   background-size: 50px 50px;
 
   @media screen and (max-width: 768px) {
@@ -183,7 +183,7 @@
 }
 
 .social {
-  background: hsl(264, 64%, 52%) url("~src/assets/images/icon-social.svg") no-repeat right 15px top -5px;
+  background: hsl(264, 64%, 52%) url("../../../assets/images/icon-social.svg") no-repeat right 15px top -5px;
   background-size: 50px 50px;
 
   @media screen and (max-width: 768px) {
@@ -192,7 +192,7 @@
 }
 
 .self-care {
-  background: hsl(43, 84%, 65%) url("~src/assets/images/icon-self-care.svg") no-repeat right 15px top -5px;
+  background: hsl(43, 84%, 65%) url("../../../assets/images/icon-self-care.svg") no-repeat right 15px top -5px;
   background-size: 50px 50px;
 
   @media screen and (max-width: 768px) {

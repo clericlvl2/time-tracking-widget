@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { TimePeriod } from 'src/app/models/time-data-interface';
+import { TimePeriod } from 'src/app/models/interfaces';
+import { BehaviorSubject } from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -7,13 +8,12 @@ import { TimePeriod } from 'src/app/models/time-data-interface';
 
 export class PeriodProviderService {
   constructor() { }
-  private currentPeriod: TimePeriod = 'daily';
+  private currentPeriod: BehaviorSubject<TimePeriod> = new BehaviorSubject<TimePeriod>('daily');
 
-  setActivityPeriod(newPeriod: TimePeriod) {
-    this.currentPeriod = newPeriod;
-    console.log(this.currentPeriod);
+  setAsyncPeriod(newPeriod: TimePeriod) {
+    this.currentPeriod.next(newPeriod);
   }
-  getActivityPeriod(): TimePeriod {
+  getAsyncPeriod() {
     return this.currentPeriod;
   }
 }

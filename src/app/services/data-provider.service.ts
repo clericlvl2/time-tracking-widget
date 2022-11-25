@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Activity, TimePeriod } from 'src/app/models/time-data-interface';
+import { Activity, TimePeriod } from 'src/app/models/interfaces';
 import ActivityData from 'src/app/mocks/data.json';
 
 @Injectable({
