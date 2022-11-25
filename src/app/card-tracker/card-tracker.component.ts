@@ -1,33 +1,31 @@
-import { Component, Input, OnChanges } from '@angular/core';
-import { ActivityPeriod } from 'src/app/models/time-data-interface';
+import { Component, Input } from '@angular/core';
+import { Activity, TimePeriod } from 'src/app/models/time-data-interface';
 
 @Component({
   selector: 'app-card-tracker',
   templateUrl: './card-tracker.component.html',
   styleUrls: ['./card-tracker.component.scss']
 })
-export class CardTrackerComponent implements OnChanges {
-  constructor() {}
-  @Input() activityName: string = 'empty';
-  @Input() activityTime: ActivityPeriod = {
-    current: 0,
-    previous: 0,
-  }
-  @Input() currentPeriod: string = 'empty'
-  setPeriodText (): string {
-    let newText = '';
-    switch (this.currentPeriod) {
-      case 'daily': newText = 'day'; break;
-      case 'weekly': newText = 'week'; break;
-      case 'monthly': newText = 'month'; break;
+
+export class CardTrackerComponent {
+  constructor() { }
+  @Input() activityData: Activity = {
+    title: 'activityTitle',
+    currentTime: 0,
+    previousTime: 0
+  };
+  @Input() activityPeriod: TimePeriod = 'daily';
+
+  setPeriodTitle(): string {
+    let periodTitle: string = '';
+    switch (this.activityPeriod) {
+      case 'daily': periodTitle = 'day'; break;
+      case 'weekly': periodTitle = 'week'; break;
+      case 'monthly': periodTitle = 'month'; break;
     }
-    return newText;
+    return periodTitle;
   }
-  //title to lowercase + delete spaces for styles
-  getCardStyle(name: string): string {
+  getCardClass(name: string): string {
     return name.toLowerCase().replace(/\s/g, '-');
-  }
-  ngOnChanges(): void {
-    this.setPeriodText();
   }
 }

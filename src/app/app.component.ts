@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { ActivityPeriod, Activity } from 'src/app/models/time-data-interface';
-import { ActivityProviderService } from "./activity-provider.service";
+import { Activity, TimePeriod } from 'src/app/models/time-data-interface';
+import { DataProviderService } from "./services/data-provider.service";
+import { PeriodProviderService } from "./services/period-provider.service";
 
 @Component({
   selector: 'app-root',
@@ -8,11 +9,9 @@ import { ActivityProviderService } from "./activity-provider.service";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(private activityService: ActivityProviderService) {}
-  activityList: Activity[] = this.activityService.getActivityData();
-  activityPeriod: string = this.activityService.getPeriod();
-  getTimeValues (item: Activity): ActivityPeriod {
-    return item.timeframes[this.activityPeriod as keyof typeof item.timeframes];
-  }
+  constructor(private dataProvider: DataProviderService,
+              private periodProvider: PeriodProviderService) { }
+  activityPeriod: TimePeriod = this.periodProvider.getActivityPeriod();
+  activityList: Activity[] = this.dataProvider.getActivityData(this.activityPeriod);
   title = 'angular-project';
 }

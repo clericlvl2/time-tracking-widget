@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { ActivityProviderService } from "../activity-provider.service";
+import { PeriodProviderService } from "../services/period-provider.service";
+import { TimePeriod } from "../models/time-data-interface";
 
 @Component({
   selector: 'app-card-user',
@@ -7,8 +8,9 @@ import { ActivityProviderService } from "../activity-provider.service";
   styleUrls: ['./card-user.component.scss']
 })
 export class CardUserComponent {
-  constructor(private activityService: ActivityProviderService) {}
-  updatePeriod(item: string): void {
-    this.activityService.setPeriod(item);
+  constructor(private periodProvider: PeriodProviderService) { }
+
+  updatePeriod(newPeriod: TimePeriod): void {
+    this.periodProvider.setActivityPeriod(newPeriod);
   }
 }
