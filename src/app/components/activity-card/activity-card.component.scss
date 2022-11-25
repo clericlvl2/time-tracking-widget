@@ -54,6 +54,7 @@
     background-size: contain;
     opacity: .6;
     border: none;
+    transition: opacity .2s;
 
     @media screen and (max-width: 768px) {
       width: 12px;
@@ -138,6 +139,11 @@
   box-sizing: border-box;
   border-radius: 10px;
   background-color: hsl(235, 46%, 20%);
+  transition: background-color .24s;
+
+  &:hover {
+    background-color: hsl(235, 46%, 26%);
+  }
 
   @media screen and (max-width: 768px) {
     height: 75%;
