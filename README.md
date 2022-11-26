@@ -2,6 +2,8 @@
 
 Activity time tracker widget based on Angular. It's a simple landing page with no actual functionality. It is intended to represent main Angular features.
 
+[Link to the project.](https://clericlvl2.github.io/time-tracking-widget/)
+
 <img src="https://cdn.discordapp.com/attachments/1045032076036030504/1045698072241508392/image.png" alt="app-preview" width="360"/>
 
 ## Technologies
